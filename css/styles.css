@@ -47,11 +47,9 @@ body {
 }
 
 .main-section-headings {
-  font-family: var(--primary-font-family);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
-  /*text-align: center;*/
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color-theme-light);
@@ -100,7 +98,6 @@ body {
 }
 
 .hero-main-title {
-  font-family: var(--main-background-color-light);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -116,9 +113,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   border-radius: 4px;
   cursor: pointer;
@@ -137,8 +131,12 @@ body {
 
 /* ======== START BENEFITS 4 ======== */
 
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 .benefits-title {
-  font-family: var(--primary-font-family);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -149,7 +147,6 @@ body {
 }
 
 .benefits-text {
-  font-family: var(--primary-font-family);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -166,22 +163,15 @@ body {
 /* ======== START ABOUT TEAM 6 ======== */
 
 .about-team-section {
-  width: 1600px;
-  left: 0px;
-  top: 1449px;
-
   background: var(--situative-background-color);
 }
 
 .about-team-item {
   width: 270px;
-  left: 215px;
-  top: 1635px;
   background-color: var(--main-background-color-light);
 }
 
 .team-member-name {
-  font-family: var(--primary-font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -192,7 +182,6 @@ body {
 }
 
 .team-member-position {
-  font-family: var(--primary-font-family);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
