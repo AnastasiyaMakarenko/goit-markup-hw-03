@@ -16,6 +16,16 @@ body {
   background-color: var(--main-background-color-light);
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .list {
   list-style: none;
 }
@@ -55,6 +65,26 @@ body {
   color: var(--primary-text-color-theme-light);
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 /* ======== END COMMON COMPONENTS 1 ======== */
 
 /* ======== START HEADER 2 ======== */
@@ -89,6 +119,17 @@ body {
   color: var(--accent-color);
 }
 
+.page-header .container {
+  display: flex;
+  align-items: center;
+  background-color: var(--main-background-color-light);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
 /* ======== END HEADER 2 ======== */
 
 /* ======== START HERO 3 ======== */
@@ -109,13 +150,15 @@ body {
 }
 
 .modal-btn {
+  border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  border-radius: 4px;
   cursor: pointer;
+  padding: 10px 32px;
+  text-decoration: none;
 
   background-color: #188ce8;
   color: var(--main-background-color-light);
