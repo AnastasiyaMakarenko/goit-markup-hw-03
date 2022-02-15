@@ -1,0 +1,290 @@
+:root {
+  --primary-font-family: 'Roboto', sans-serif;
+  --secondary-font-family: 'Raleway', sans-serif;
+  --primary-text-color-theme-light: #212121;
+  --secondary-text-color-theme-light: #757575;
+  --main-background-color-light: #ffffff;
+  --secondary-background-color-dark: #2f303a;
+  --situative-background-color: #f5f4fa;
+
+  --accent-color: #2196f3;
+}
+
+body {
+  font-family: var(--primary-font-family);
+  color: var(--primary-text-color-theme-light);
+  background-color: var(--main-background-color-light);
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* ======== START COMMON COMPONENTS 1 ======== */
+
+.main-menu-link {
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+
+  color: var(--primary-text-color-theme-light);
+}
+
+.main-menu-link:hover,
+.main-menu-link:focus {
+  color: var(--accent-color);
+}
+
+.active-page {
+  color: var(--accent-color);
+}
+
+.main-section-headings {
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  /*text-align: center;*/
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color-theme-light);
+}
+
+/* ======== END COMMON COMPONENTS 1 ======== */
+
+/* ======== START HEADER 2 ======== */
+
+.logo {
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: #000000;
+}
+
+.logo-first-part {
+  color: var(--accent-color);
+}
+
+.main-contacts-link {
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color-theme-light);
+}
+
+.main-contacts-link:hover,
+.main-contacts-link:focus {
+  color: var(--accent-color);
+}
+
+/* ======== END HEADER 2 ======== */
+
+/* ======== START HERO 3 ======== */
+
+.hero-section {
+  background-color: var(--secondary-background-color-dark);
+}
+
+.hero-main-title {
+  font-family: var(--main-background-color-light);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--main-background-color-light);
+}
+
+.modal-btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  cursor: pointer;
+
+  background-color: #188ce8;
+  color: var(--main-background-color-light);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--main-background-color-light);
+}
+
+/* ======== END HERO 3 ======== */
+
+/* ======== START BENEFITS 4 ======== */
+
+.benefits-title {
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-text-color-theme-light);
+}
+
+.benefits-text {
+  font-family: var(--primary-font-family);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color-theme-light);
+}
+
+/* ======== END BENEFITS 4 ======== */
+
+/* ======== START ABOUT SERVICES 5 ======== */
+
+/* ======== END ABOUT SERVICES 5 ======== */
+
+/* ======== START ABOUT TEAM 6 ======== */
+
+.about-team-section {
+  width: 1600px;
+  left: 0px;
+  top: 1449px;
+
+  background: var(--situative-background-color);
+}
+
+.about-team-item {
+  width: 270px;
+  left: 215px;
+  top: 1635px;
+  background-color: var(--main-background-color-light);
+}
+
+.team-member-name {
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color-theme-light);
+}
+
+.team-member-position {
+  font-family: var(--primary-font-family);
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color-theme-light);
+}
+
+/* ======== END ABOUT TEAM 6 ======== */
+
+/* ======== START FOOTER 7 ======== */
+
+footer {
+  background-color: var(--secondary-background-color-dark);
+}
+
+.logo-footer {
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: var(--main-background-color-light);
+}
+
+.logo-first-part {
+  color: var(--accent-color);
+}
+
+.address-contacts-link {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+
+  color: var(--main-background-color-light);
+}
+
+.address-contacts-link:hover,
+.address-contacts-link:focus {
+  color: var(--accent-color);
+}
+
+/* ======== END FOOTER 7 ======== */
+
+/* ======== START PORTFOLIO MENU 8 ======== */
+
+.modal-portfolio-btn {
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  cursor: pointer;
+
+  background-color: var(--situative-background-color);
+  color: var(--primary-text-color-theme-light);
+}
+
+.modal-portfolio-btn:hover,
+.modal-portfolio-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--main-background-color-light);
+}
+
+/* ======== END PORTFOLIO MENU 8 ======== */
+
+/* ======== START PORTFOLIO ITEMS 9 ======== */
+
+.portfolio-item-title {
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-text-color-theme-light);
+}
+
+.portfolio-item-text {
+  font-family: var(--primary-font-family);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color-theme-light);
+}
+
+/* ======== END PORTFOLIO ITEMS 9 ======== */
