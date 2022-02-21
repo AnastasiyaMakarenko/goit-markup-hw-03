@@ -49,13 +49,27 @@ img {
 
 /*параметры секций*/
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding: 94px 0;
 }
 
 /*убирает маркеры на списках*/
 .list {
   list-style: none;
+}
+
+/* одинаковые заголовки секций */
+
+.main-section-headings {
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color-theme-light);
 }
 
 /* ======== END COMMON COMPONENTS ======== */
@@ -94,7 +108,7 @@ header {
   color: var(--main-background-color-light);
 }
 
-/*Навігація сайту*/
+/*Навигация сайта*/
 .site-nav {
   display: flex;
   align-items: center;
@@ -205,13 +219,24 @@ header {
 /* скрывает заголовок секции */
 
 .visually-hidden {
-  position: fixed;
-  transform: scale(0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*заголовки преимуществ*/
 
 .benefits-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -231,24 +256,75 @@ header {
   color: var(--secondary-text-color-theme-light);
 }
 
+/*расположение элементов секции*/
+
+.section .benefits {
+  padding-bottom: 0;
+}
+
+.benefits .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * 30px);
+}
+
+/*ставит элементы горизонтально*/
+
+.benefits-item {
+  margin-left: 30px;
+  flex-basis: calc((100% - 4 * 30px) / 4);
+}
+
 /* ======== END BENEFITS 4 ======== */
 
 /* ======== START ABOUT SERVICES 5 ======== */
+
+/* выравнивает контент секции по горизонтали */
+
+.services .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+/* добавляет расстояние между img и позиционирует */
+
+.list .services-item {
+  margin-left: 30px;
+  flex-basis: calc((100% - 3 * 30px) / 3);
+}
 
 /* ======== END ABOUT SERVICES 5 ======== */
 
 /* ======== START ABOUT TEAM 6 ======== */
 
-.about-team-section {
+.about-team {
   background: var(--situative-background-color);
 }
 
-.about-team-item {
-  width: 270px;
-  background-color: var(--main-background-color-light);
+/* выравнивает карточки команды по горизонтали */
+
+.about-team .list {
+  margin-left: -30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.about-team-item {
+  margin-left: 30px;
+  flex-basis: calc((100% - 30px * 4) / 4);
+
+  background-color: var(--main-background-color-light);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* имена членов команды*/
+
 .team-member-name {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -267,6 +343,11 @@ header {
   color: var(--secondary-text-color-theme-light);
 }
 
+.title-name-group {
+  padding: 30px 0;
+  text-align: center;
+}
+
 /* ======== END ABOUT TEAM 6 ======== */
 
 /* ======== START FOOTER 7 ======== */
@@ -283,7 +364,7 @@ footer .logo {
   margin-right: 0px;
 }
 
-/*адреса*/
+/*адрес*/
 .location {
   font-style: normal;
   line-height: 1.71;
@@ -315,6 +396,18 @@ footer .logo {
 
 /* ======== START PORTFOLIO MENU 8 ======== */
 
+/* задаёт стили и расположение кнопкам фильтра */
+
+.filter.list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter > li:not(:last-child) {
+  margin-right: 8px;
+}
+
 .modal-portfolio-btn {
   padding: 6px 22px;
 
@@ -345,7 +438,9 @@ footer .logo {
 
 /* ======== START PORTFOLIO ITEMS 9 ======== */
 
-.portfolio-item-title {
+/* оформление текста карточек*/
+
+.project-item-title {
   font-family: var(--primary-font-family);
   font-weight: 700;
   font-size: 18px;
@@ -355,10 +450,64 @@ footer .logo {
   color: var(--primary-text-color-theme-light);
 }
 
-.portfolio-item-text {
+.project-item-text {
   font-family: var(--primary-font-family);
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color-theme-light);
+}
+
+/* позиционирование элементов */
+
+.projects.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.project-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 30px * 3) / 3);
+
+  background-color: var(--main-background-color-light);
+}
+
+.project-link {
+  font-family: var(--primary-font-family);
+  text-decoration: none;
+}
+
+.project-link :hover,
+.project-link :focus {
+  visibility: visible;
+}
+
+.project-item-group {
+  padding: 20px 24px;
+  border: solid 1px #eeeeee;
+  border-top: none;
+}
+
+/* текст в карточках */
+
+.project-item-title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-text-color-theme-light);
+}
+
+.project-item-text {
+  font-size: 16px;
+  line-height: 1.88;
   letter-spacing: 0.03em;
 
   color: var(--secondary-text-color-theme-light);
