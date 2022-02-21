@@ -299,6 +299,8 @@ header {
 /* ======== START ABOUT TEAM 6 ======== */
 
 .about-team {
+  padding: 94px 0;
+
   background: var(--situative-background-color);
 }
 
