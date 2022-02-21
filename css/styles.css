@@ -86,7 +86,7 @@ header {
   align-items: center;
 }
 
-/*Логотип*/
+/*логотип*/
 
 .logo {
   margin-right: 93px;
@@ -108,7 +108,7 @@ header {
   color: var(--main-background-color-light);
 }
 
-/*Навигация сайта*/
+/*навигация сайта*/
 .site-nav {
   display: flex;
   align-items: center;
@@ -364,7 +364,7 @@ footer .logo {
   margin-right: 0px;
 }
 
-/*адрес*/
+/*адресс*/
 .location {
   font-style: normal;
   line-height: 1.71;
