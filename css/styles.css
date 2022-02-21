@@ -10,77 +10,14 @@
   --accent-color: #2196f3;
 }
 
+/* ======== START COMMON COMPONENTS 1 ======== */
+
 body {
   font-family: var(--primary-font-family);
   color: var(--primary-text-color-theme-light);
   background-color: var(--main-background-color-light);
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
-/* ======== START COMMON COMPONENTS 1 ======== */
-
-.main-menu-link {
-  font-family: var(--primary-font-family);
-  font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-
-  color: var(--primary-text-color-theme-light);
-}
-
-.main-menu-link:hover,
-.main-menu-link:focus {
-  color: var(--accent-color);
-}
-
-.active-page {
-  color: var(--accent-color);
-}
-
-.main-section-headings {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
   letter-spacing: 0.03em;
-
-  color: var(--primary-text-color-theme-light);
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-}
-
-.section {
-  padding-bottom: 94px;
-  padding-top: 94px;
 }
 
 h1,
@@ -95,66 +32,123 @@ p {
   padding: 0;
 }
 
-/* ======== END COMMON COMPONENTS 1 ======== */
-
-/* ======== START HEADER 2 ======== */
-
-.container-header {
-  display: flex;
-  height: 80px;
+/*параметры всех img*/
+img {
+  display: block;
+  max-width: 100%;
 }
 
-.logo {
-  font-family: var(--secondary-font-family);
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  color: #000000;
+/*параметры контейнера*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
 }
 
-.logo-first-part {
-  color: var(--accent-color);
+/*параметры секций*/
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 
-.main-menu-link {
+/*убирает маркеры на списках*/
+.list {
+  list-style: none;
 }
 
-.main-contacts-link {
-  font-family: var(--primary-font-family);
-  font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+/* ======== END COMMON COMPONENTS ======== */
 
-  color: var(--secondary-text-color-theme-light);
-}
+/* ======== START HEADER 1 ======== */
 
-.main-contacts-link:hover,
-.main-contacts-link:focus {
-  color: var(--accent-color);
-}
-
-.page-header {
+header {
   border-bottom: solid 1px #ececec;
 }
 
-.page-header .container {
+/*перестраивает все элементы header на flex*/
+.header.container {
   display: flex;
   align-items: center;
-  background-color: var(--main-background-color-light);
 }
 
+/*Логотип*/
+
+.logo {
+  margin-right: 93px;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.logo-black {
+  color: #000000;
+}
+
+.logo-white {
+  color: var(--main-background-color-light);
+}
+
+/*Навігація сайту*/
 .site-nav {
   display: flex;
   align-items: center;
 }
 
-.header-contacts {
+.site-nav .link {
+  display: block;
+  padding: 32px 0;
+
+  color: var(--primary-text-color-theme-light);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav > li {
+  margin-right: 50px;
+}
+.site-nav > li:last-child {
+  margin-right: 0px;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+.site-nav .link.curent {
+  color: var(--accent-color);
+}
+
+/*Контакти*/
+
+.top-contact.list {
   display: flex;
   margin-left: auto;
+}
+
+.header-contact {
+  color: var(--secondary-text-color-theme-light);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--accent-color);
+}
+
+.top-contact.list > li:first-child {
+  margin-right: 50px;
 }
 
 /* ======== END HEADER 2 ======== */
@@ -208,10 +202,14 @@ p {
 
 /* ======== START BENEFITS 4 ======== */
 
+/* скрывает заголовок секции */
+
 .visually-hidden {
   position: fixed;
   transform: scale(0);
 }
+
+/*заголовки преимуществ*/
 
 .benefits-title {
   font-weight: 700;
@@ -222,6 +220,8 @@ p {
 
   color: var(--primary-text-color-theme-light);
 }
+
+/*текст преимуществ*/
 
 .benefits-text {
   font-size: 14px;
@@ -271,55 +271,43 @@ p {
 
 /* ======== START FOOTER 7 ======== */
 
-.site-footer {
-  background-color: var(--secondary-background-color-dark);
+footer {
+  background: var(--secondary-background-color-dark);
+  padding: 60px 0;
 }
 
-.container-footer {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-}
-
-.logo-footer {
-  font-family: var(--secondary-font-family);
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  color: var(--main-background-color-light);
-}
-
-.logo-first-part {
-  color: var(--accent-color);
-}
-
-.all-logo-footer {
+/*лого в футере*/
+footer .logo {
   display: inline-block;
   margin-bottom: 20px;
   margin-right: 0px;
 }
 
-.address-contacts-link {
-  padding-bottom: 9px;
-  font-family: var(--primary-font-family);
-  font-weight: 400;
+/*адреса*/
+.location {
   font-style: normal;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  cursor: pointer;
 
   color: var(--main-background-color-light);
+
+  margin-bottom: 9px;
 }
 
-.address-contacts-link:hover,
-.address-contacts-link:focus {
+/*контакты*/
+
+.footer-contact {
+  font-style: normal;
+  line-height: 1.71;
+  text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-contact:hover,
+.footer-contact:focus {
   color: var(--accent-color);
 }
 
-.main-contacts-link:first-child {
+.bottom.list > li:first-child {
   margin-bottom: 9px;
 }
 
