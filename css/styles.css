@@ -49,7 +49,7 @@ img {
 
 /*параметры секций*/
 .section {
-  padding: 94px 0 0;
+  padding: 94px 0 94px 0;
 }
 
 /*убирает маркеры на списках*/
@@ -479,6 +479,7 @@ footer .logo {
 }
 
 .project-link {
+  display: inline-block;
   font-family: var(--primary-font-family);
   text-decoration: none;
 }
