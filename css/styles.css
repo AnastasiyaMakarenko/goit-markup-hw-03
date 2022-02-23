@@ -258,7 +258,7 @@ header {
 
 /*расположение элементов секции*/
 
-.section .benefits {
+.section.benefits {
   padding-bottom: 0;
 }
 
